@@ -1,71 +1,63 @@
-# Elevate-labs-Task-1
-🧹 Marketing Campaign Data Cleaning Project
-This project focuses on cleaning a raw dataset named marketing_campaign_dirty.csv to prepare it for further analysis and visualization. The dataset contains information related to customer demographics and their response to a marketing campaign.
+🧹 Elevate Labs - Task 1: Marketing Campaign Data Cleaning Project  
+This project is all about transforming a **raw, messy dataset** into a clean, analysis-ready format. The dataset (`marketing_campaign_dirty.csv`) includes valuable information about customer demographics and their responses to marketing campaigns.
 
-🗂️ Dataset Overview
-The raw dataset contained:
+---
 
-Missing or null values
+## 🗂️ Dataset Overview
 
-Duplicated rows
+The original dataset had several data quality issues:
 
-Inconsistent text formatting 
+- ❌ Missing or null values  
+- 🔁 Duplicate rows  
+- 🔡 Inconsistent text formatting  
+- 🗓️ Unstandardized date formats  
+- 🧾 Improper column naming  
+- 🔢 Incorrect data types  
 
-Unstandardized date formats
+---
 
-Improper column naming
+## ✅ Cleaning Steps Performed
 
-Incorrect data types
+### 1️⃣ Handling Missing Values
+- Replaced **null/empty values** with:
+  - `0` for **numerical** columns  
+  - `"Unknown"` for **categorical** columns
 
-✅ Cleaning Steps Performed
-1. Handling Missing Values
-Replaced all null or empty values with:
+### 2️⃣ Removing Duplicates
+- Deleted **duplicate rows** to maintain **data accuracy and uniqueness**
 
-0 for numerical columns
+### 3️⃣ Text Standardization
+- Cleaned and standardized fields like:
+  - **Education** (`graduation` ➝ `Graduation`)
+  - **Marital_Status** (`single`, `Single` ➝ `Single`)
 
-"Unknown" for categorical columns
+### 4️⃣ Date Format Conversion
+- Unified all date formats to: `dd-mm-yyyy`
 
-2. Removing Duplicates
-Removed all duplicate rows to ensure data uniqueness and accuracy.
+### 5️⃣ Renaming Columns
+- Made column headers:
+  - Lowercase  
+  - Without spaces or special characters  
+  - Underscore-separated  
+  - Example: `Year Of Birth` ➝ `year_of_birth`
 
-3. Text Standardization
-Standardized text fields such as:
-Education (e.g., graduation = Graduation)
-Marital_Status  (e.g., Single and single = Single)
+### 6️⃣ Fixing Data Types
+- Converted:
+  - `age` ➝ `int`  
+  - Dates ➝ `datetime`  
+  - Other fields ➝ **appropriate types**
 
-5. Date Format Conversion
-Converted all date columns to a consistent format: dd-mm-yyyy
+---
 
-6. Renaming Columns
-Renamed column headers to be:
+## 🛠️ Tools Used
 
-Lowercase
+- 📊 **Advanced Excel**
 
-Without spaces or special characters
+---
 
-Underscore-separated (e.g., Year Of Birth=Year_Of_Birth)
+## 🔮 Future Work
 
-6. Fixing Data Types
-Converted:
-
-Age to int
-
-Dates to datetime type
-
-Other fields to appropriate data types
-
-📁 Files Included
-marketing_campaign_dirty.csv: Original dataset (raw)
-
-marketing_campaign_cleaned.csv: Final cleaned dataset
-
-🛠️ Tools Used
-Advance excel
-
-📊 Future Work
-Perform Exploratory Data Analysis (EDA)
-
-Build visualizations
-
-Train machine learning models for marketing insights
+- 🔍 Perform **Exploratory Data Analysis (EDA)**  
+- 📈 Build **visualizations** for insights  
+- 🤖 Train **machine learning models** to enhance marketing strategy
 
